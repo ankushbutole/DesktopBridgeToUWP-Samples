@@ -2,17 +2,17 @@
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <MyProjectOutputPath>$(PackageLayout)\..\..\MyDesktopApp\bin</MyProjectOutputPath>
-    <MyBgTaskOutputPath>$(PackageLayout)\..\..\BackgroundTasks\bin</MyBgTaskOutputPath>
+    <MyBgTaskOutputPath>$(PackageLayout)\..\..\DummyApp\bin</MyBgTaskOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <LayoutFile Include="$(MyProjectOutputPath)\$(Configuration)\MyDesktopApp.exe">
+    <LayoutFile Include="$(MyProjectOutputPath)\$(Platform)\$(Configuration)\MyDesktopApp.exe">
       <PackagePath>$(PackageLayout)\MyDesktopApp.exe</PackagePath>
     </LayoutFile>
-    <LayoutFile Include="$(MyBgTaskOutputPath)\$(Configuration)\BackgroundTasks.winmd">
+    <LayoutFile Include="$(MyBgTaskOutputPath)\$(Platform)\$(Configuration)\ilc\BackgroundTasks.winmd">
       <PackagePath>$(PackageLayout)\BackgroundTasks.winmd</PackagePath>
     </LayoutFile>
-    <LayoutFile Include="$(MyBgTaskOutputPath)\$(Configuration)\BackgroundTasks.pri">
-      <PackagePath>$(PackageLayout)\BackgroundTasks.pri</PackagePath>
+    <LayoutFile Include="$(MyBgTaskOutputPath)\$(Platform)\$(Configuration)\ilc\DummyApp.dll">
+      <PackagePath>$(PackageLayout)\DummyApp.dll</PackagePath>
     </LayoutFile>
   </ItemGroup>
 </Project>
